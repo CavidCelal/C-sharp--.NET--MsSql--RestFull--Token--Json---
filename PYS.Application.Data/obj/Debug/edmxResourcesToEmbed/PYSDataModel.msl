@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PYSDataModelStoreContainer" CdmEntityContainer="DbPYSEntities">
+    <EntitySetMapping Name="SysAdresTipleri">
+      <EntityTypeMapping TypeName="PYSDataModel.SysAdresTipleri">
+        <MappingFragment StoreEntitySet="SysAdresTipleri">
+          <ScalarProperty Name="KayitVersiyonu" ColumnName="KayitVersiyonu" />
+          <ScalarProperty Name="Silik" ColumnName="Silik" />
+          <ScalarProperty Name="Aktif" ColumnName="Aktif" />
+          <ScalarProperty Name="KayitTarihi" ColumnName="KayitTarihi" />
+          <ScalarProperty Name="EvTelefonu" ColumnName="EvTelefonu" />
+          <ScalarProperty Name="IsTelefonu" ColumnName="IsTelefonu" />
+          <ScalarProperty Name="CepTelefonu" ColumnName="CepTelefonu" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+          <ScalarProperty Name="Adres" ColumnName="Adres" />
+          <ScalarProperty Name="IletisimTipi" ColumnName="IletisimTipi" />
+          <ScalarProperty Name="IletisimTipiId" ColumnName="IletisimTipiId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SysUnvanlar">
+      <EntityTypeMapping TypeName="PYSDataModel.SysUnvanlar">
+        <MappingFragment StoreEntitySet="SysUnvanlar">
+          <ScalarProperty Name="KayitVersiyonu" ColumnName="KayitVersiyonu" />
+          <ScalarProperty Name="Silik" ColumnName="Silik" />
+          <ScalarProperty Name="Aktif" ColumnName="Aktif" />
+          <ScalarProperty Name="KayitTarihi" ColumnName="KayitTarihi" />
+          <ScalarProperty Name="Unvan" ColumnName="Unvan" />
+          <ScalarProperty Name="UnvanId" ColumnName="UnvanId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblKisi">
+      <EntityTypeMapping TypeName="PYSDataModel.TblKisi">
+        <MappingFragment StoreEntitySet="TblKisi">
+          <ScalarProperty Name="KayitVersiyonu" ColumnName="KayitVersiyonu" />
+          <ScalarProperty Name="Silik" ColumnName="Silik" />
+          <ScalarProperty Name="Aktif" ColumnName="Aktif" />
+          <ScalarProperty Name="KayitTarihi" ColumnName="KayitTarihi" />
+          <ScalarProperty Name="Cinsiyet" ColumnName="Cinsiyet" />
+          <ScalarProperty Name="DogumTarihi" ColumnName="DogumTarihi" />
+          <ScalarProperty Name="Tc" ColumnName="Tc" />
+          <ScalarProperty Name="Soyad" ColumnName="Soyad" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="UnvanId" ColumnName="UnvanId" />
+          <ScalarProperty Name="KisiId" ColumnName="KisiId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblKisiFirma">
+      <EntityTypeMapping TypeName="PYSDataModel.TblKisiFirma">
+        <MappingFragment StoreEntitySet="TblKisiFirma">
+          <ScalarProperty Name="KayitVersiyonu" ColumnName="KayitVersiyonu" />
+          <ScalarProperty Name="Silik" ColumnName="Silik" />
+          <ScalarProperty Name="Aktif" ColumnName="Aktif" />
+          <ScalarProperty Name="KayitTarihi" ColumnName="KayitTarihi" />
+          <ScalarProperty Name="FirmaId" ColumnName="FirmaId" />
+          <ScalarProperty Name="KisiId" ColumnName="KisiId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblKisiIletisim">
+      <EntityTypeMapping TypeName="PYSDataModel.TblKisiIletisim">
+        <MappingFragment StoreEntitySet="TblKisiIletisim">
+          <ScalarProperty Name="KayitVersiyonu" ColumnName="KayitVersiyonu" />
+          <ScalarProperty Name="Silik" ColumnName="Silik" />
+          <ScalarProperty Name="Aktif" ColumnName="Aktif" />
+          <ScalarProperty Name="KayitTarihi" ColumnName="KayitTarihi" />
+          <ScalarProperty Name="KisiId" ColumnName="KisiId" />
+          <ScalarProperty Name="Iletisim" ColumnName="Iletisim" />
+          <ScalarProperty Name="IletisimTipiId" ColumnName="IletisimTipiId" />
+          <ScalarProperty Name="IletisimId" ColumnName="IletisimId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblKullanicilar">
+      <EntityTypeMapping TypeName="PYSDataModel.TblKullanicilar">
+        <MappingFragment StoreEntitySet="TblKullanicilar">
+          <ScalarProperty Name="KayitVersiyonu" ColumnName="KayitVersiyonu" />
+          <ScalarProperty Name="Silik" ColumnName="Silik" />
+          <ScalarProperty Name="Aktif" ColumnName="Aktif" />
+          <ScalarProperty Name="SonGirisTarihi" ColumnName="SonGirisTarihi" />
+          <ScalarProperty Name="KayitTarihi" ColumnName="KayitTarihi" />
+          <ScalarProperty Name="Guid" ColumnName="Guid" />
+          <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+          <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
+          <ScalarProperty Name="KisiId" ColumnName="KisiId" />
+          <ScalarProperty Name="KullaniciId" ColumnName="KullaniciId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VwFirmalar">
+      <EntityTypeMapping TypeName="PYSDataModel.VwFirmalar">
+        <MappingFragment StoreEntitySet="VwFirmalar">
+          <ScalarProperty Name="FirmaGuid" ColumnName="FirmaGuid" />
+          <ScalarProperty Name="KayitVersiyonu" ColumnName="KayitVersiyonu" />
+          <ScalarProperty Name="Silik" ColumnName="Silik" />
+          <ScalarProperty Name="Aktif" ColumnName="Aktif" />
+          <ScalarProperty Name="KayitTarihi" ColumnName="KayitTarihi" />
+          <ScalarProperty Name="FirmaUnvan" ColumnName="FirmaUnvan" />
+          <ScalarProperty Name="FirmaKodu" ColumnName="FirmaKodu" />
+          <ScalarProperty Name="FirmaId" ColumnName="FirmaId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblFirmalar">
+      <EntityTypeMapping TypeName="PYSDataModel.TblFirmalar">
+        <MappingFragment StoreEntitySet="TblFirmalar">
+          <ScalarProperty Name="FirmaGuid" ColumnName="FirmaGuid" />
+          <ScalarProperty Name="KayitVersiyonu" ColumnName="KayitVersiyonu" />
+          <ScalarProperty Name="Silik" ColumnName="Silik" />
+          <ScalarProperty Name="Aktif" ColumnName="Aktif" />
+          <ScalarProperty Name="KayitTarihi" ColumnName="KayitTarihi" />
+          <ScalarProperty Name="FirmaUnvan" ColumnName="FirmaUnvan" />
+          <ScalarProperty Name="FirmaKodu" ColumnName="FirmaKodu" />
+          <ScalarProperty Name="FirmaId" ColumnName="FirmaId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VwKisiKullaniciIletisim">
+      <EntityTypeMapping TypeName="PYSDataModel.VwKisiKullaniciIletisim">
+        <MappingFragment StoreEntitySet="VwKisiKullaniciIletisim">
+          <ScalarProperty Name="Unvan" ColumnName="Unvan" />
+          <ScalarProperty Name="FirmaUnvan" ColumnName="FirmaUnvan" />
+          <ScalarProperty Name="FirmaKodu" ColumnName="FirmaKodu" />
+          <ScalarProperty Name="Iletisim" ColumnName="Iletisim" />
+          <ScalarProperty Name="IletisimTipi" ColumnName="IletisimTipi" />
+          <ScalarProperty Name="IletisimTipiId" ColumnName="IletisimTipiId" />
+          <ScalarProperty Name="IletisimId" ColumnName="IletisimId" />
+          <ScalarProperty Name="Guid" ColumnName="Guid" />
+          <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+          <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
+          <ScalarProperty Name="KullaniciId" ColumnName="KullaniciId" />
+          <ScalarProperty Name="KayitVersiyonu" ColumnName="KayitVersiyonu" />
+          <ScalarProperty Name="Silik" ColumnName="Silik" />
+          <ScalarProperty Name="Aktif" ColumnName="Aktif" />
+          <ScalarProperty Name="KayitTarihi" ColumnName="KayitTarihi" />
+          <ScalarProperty Name="Cinsiyet" ColumnName="Cinsiyet" />
+          <ScalarProperty Name="DogumTarihi" ColumnName="DogumTarihi" />
+          <ScalarProperty Name="Tc" ColumnName="Tc" />
+          <ScalarProperty Name="Soyad" ColumnName="Soyad" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="UnvanId" ColumnName="UnvanId" />
+          <ScalarProperty Name="KisiId" ColumnName="KisiId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PYSDataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="SysAdresTipleri">
+    <Key>
+      <PropertyRef Name="IletisimTipiId" />
+    </Key>
+    <Property Name="IletisimTipiId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IletisimTipi" Type="nvarchar" MaxLength="100" />
+    <Property Name="Adres" Type="bit" />
+    <Property Name="Mail" Type="bit" />
+    <Property Name="CepTelefonu" Type="bit" />
+    <Property Name="IsTelefonu" Type="bit" />
+    <Property Name="EvTelefonu" Type="bit" />
+    <Property Name="KayitTarihi" Type="datetime" />
+    <Property Name="Aktif" Type="bit" />
+    <Property Name="Silik" Type="bit" />
+    <Property Name="KayitVersiyonu" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="SysUnvanlar">
+    <Key>
+      <PropertyRef Name="UnvanId" />
+    </Key>
+    <Property Name="UnvanId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Unvan" Type="nvarchar" MaxLength="100" />
+    <Property Name="KayitTarihi" Type="datetime" />
+    <Property Name="Aktif" Type="bit" />
+    <Property Name="Silik" Type="bit" />
+    <Property Name="KayitVersiyonu" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="TblFirmalar">
+    <Key>
+      <PropertyRef Name="FirmaId" />
+    </Key>
+    <Property Name="FirmaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirmaKodu" Type="nvarchar" MaxLength="50" />
+    <Property Name="FirmaUnvan" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="KayitTarihi" Type="datetime" />
+    <Property Name="Aktif" Type="bit" />
+    <Property Name="Silik" Type="bit" />
+    <Property Name="KayitVersiyonu" Type="timestamp" StoreGeneratedPattern="Computed" />
+    <Property Name="FirmaGuid" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="TblKisi">
+    <Key>
+      <PropertyRef Name="KisiId" />
+    </Key>
+    <Property Name="KisiId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UnvanId" Type="int" />
+    <Property Name="Ad" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Soyad" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Tc" Type="bigint" Nullable="false" />
+    <Property Name="DogumTarihi" Type="date" />
+    <Property Name="Cinsiyet" Type="nvarchar" MaxLength="5" />
+    <Property Name="KayitTarihi" Type="datetime" />
+    <Property Name="Aktif" Type="bit" />
+    <Property Name="Silik" Type="bit" />
+    <Property Name="KayitVersiyonu" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="TblKisiFirma">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KisiId" Type="int" Nullable="false" />
+    <Property Name="FirmaId" Type="int" />
+    <Property Name="KayitTarihi" Type="datetime" />
+    <Property Name="Aktif" Type="bit" />
+    <Property Name="Silik" Type="bit" />
+    <Property Name="KayitVersiyonu" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="TblKisiIletisim">
+    <Key>
+      <PropertyRef Name="IletisimId" />
+    </Key>
+    <Property Name="IletisimId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IletisimTipiId" Type="int" />
+    <Property Name="Iletisim" Type="nvarchar" MaxLength="100" />
+    <Property Name="KisiId" Type="int" Nullable="false" />
+    <Property Name="KayitTarihi" Type="datetime" />
+    <Property Name="Aktif" Type="bit" />
+    <Property Name="Silik" Type="bit" />
+    <Property Name="KayitVersiyonu" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="TblKullanicilar">
+    <Key>
+      <PropertyRef Name="KullaniciId" />
+    </Key>
+    <Property Name="KullaniciId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KisiId" Type="int" Nullable="false" />
+    <Property Name="KullaniciAdi" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Sifre" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Guid" Type="uniqueidentifier" />
+    <Property Name="KayitTarihi" Type="datetime" />
+    <Property Name="SonGirisTarihi" Type="datetime" />
+    <Property Name="Aktif" Type="bit" />
+    <Property Name="Silik" Type="bit" />
+    <Property Name="KayitVersiyonu" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DbPYS.dbo.VwFirmalar' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VwFirmalar">
+    <Key>
+      <PropertyRef Name="FirmaId" />
+      <PropertyRef Name="FirmaUnvan" />
+    </Key>
+    <Property Name="FirmaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirmaKodu" Type="nvarchar" MaxLength="50" />
+    <Property Name="FirmaUnvan" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="KayitTarihi" Type="datetime" />
+    <Property Name="Aktif" Type="bit" />
+    <Property Name="Silik" Type="bit" />
+    <Property Name="KayitVersiyonu" Type="timestamp" StoreGeneratedPattern="Computed" />
+    <Property Name="FirmaGuid" Type="uniqueidentifier" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DbPYS.dbo.VwKisiKullaniciIletisim' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VwKisiKullaniciIletisim">
+    <Key>
+      <PropertyRef Name="KisiId" />
+      <PropertyRef Name="Ad" />
+      <PropertyRef Name="Soyad" />
+      <PropertyRef Name="Tc" />
+      <PropertyRef Name="KullaniciId" />
+      <PropertyRef Name="KullaniciAdi" />
+      <PropertyRef Name="Sifre" />
+      <PropertyRef Name="IletisimId" />
+      <PropertyRef Name="IletisimTipiId" />
+      <PropertyRef Name="FirmaUnvan" />
+    </Key>
+    <Property Name="KisiId" Type="int" Nullable="false" />
+    <Property Name="UnvanId" Type="int" />
+    <Property Name="Ad" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Soyad" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Tc" Type="bigint" Nullable="false" />
+    <Property Name="DogumTarihi" Type="date" />
+    <Property Name="Cinsiyet" Type="nvarchar" MaxLength="5" />
+    <Property Name="KayitTarihi" Type="datetime" />
+    <Property Name="Aktif" Type="bit" />
+    <Property Name="Silik" Type="bit" />
+    <Property Name="KayitVersiyonu" Type="timestamp" StoreGeneratedPattern="Computed" />
+    <Property Name="KullaniciId" Type="int" Nullable="false" />
+    <Property Name="KullaniciAdi" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Sifre" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Guid" Type="uniqueidentifier" />
+    <Property Name="IletisimId" Type="int" Nullable="false" />
+    <Property Name="IletisimTipiId" Type="int" Nullable="false" />
+    <Property Name="IletisimTipi" Type="nvarchar" MaxLength="100" />
+    <Property Name="Iletisim" Type="nvarchar" MaxLength="100" />
+    <Property Name="FirmaKodu" Type="nvarchar" MaxLength="50" />
+    <Property Name="FirmaUnvan" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Unvan" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityContainer Name="PYSDataModelStoreContainer">
+    <EntitySet Name="SysAdresTipleri" EntityType="Self.SysAdresTipleri" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SysUnvanlar" EntityType="Self.SysUnvanlar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblFirmalar" EntityType="Self.TblFirmalar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblKisi" EntityType="Self.TblKisi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblKisiFirma" EntityType="Self.TblKisiFirma" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblKisiIletisim" EntityType="Self.TblKisiIletisim" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblKullanicilar" EntityType="Self.TblKullanicilar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VwFirmalar" EntityType="Self.VwFirmalar" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VwFirmalar].[FirmaId] AS [FirmaId], 
+    [VwFirmalar].[FirmaKodu] AS [FirmaKodu], 
+    [VwFirmalar].[FirmaUnvan] AS [FirmaUnvan], 
+    [VwFirmalar].[KayitTarihi] AS [KayitTarihi], 
+    [VwFirmalar].[Aktif] AS [Aktif], 
+    [VwFirmalar].[Silik] AS [Silik], 
+    [VwFirmalar].[KayitVersiyonu] AS [KayitVersiyonu], 
+    [VwFirmalar].[FirmaGuid] AS [FirmaGuid]
+    FROM [dbo].[VwFirmalar] AS [VwFirmalar]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VwKisiKullaniciIletisim" EntityType="Self.VwKisiKullaniciIletisim" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VwKisiKullaniciIletisim].[KisiId] AS [KisiId], 
+    [VwKisiKullaniciIletisim].[UnvanId] AS [UnvanId], 
+    [VwKisiKullaniciIletisim].[Ad] AS [Ad], 
+    [VwKisiKullaniciIletisim].[Soyad] AS [Soyad], 
+    [VwKisiKullaniciIletisim].[Tc] AS [Tc], 
+    [VwKisiKullaniciIletisim].[DogumTarihi] AS [DogumTarihi], 
+    [VwKisiKullaniciIletisim].[Cinsiyet] AS [Cinsiyet], 
+    [VwKisiKullaniciIletisim].[KayitTarihi] AS [KayitTarihi], 
+    [VwKisiKullaniciIletisim].[Aktif] AS [Aktif], 
+    [VwKisiKullaniciIletisim].[Silik] AS [Silik], 
+    [VwKisiKullaniciIletisim].[KayitVersiyonu] AS [KayitVersiyonu], 
+    [VwKisiKullaniciIletisim].[KullaniciId] AS [KullaniciId], 
+    [VwKisiKullaniciIletisim].[KullaniciAdi] AS [KullaniciAdi], 
+    [VwKisiKullaniciIletisim].[Sifre] AS [Sifre], 
+    [VwKisiKullaniciIletisim].[Guid] AS [Guid], 
+    [VwKisiKullaniciIletisim].[IletisimId] AS [IletisimId], 
+    [VwKisiKullaniciIletisim].[IletisimTipiId] AS [IletisimTipiId], 
+    [VwKisiKullaniciIletisim].[IletisimTipi] AS [IletisimTipi], 
+    [VwKisiKullaniciIletisim].[Iletisim] AS [Iletisim], 
+    [VwKisiKullaniciIletisim].[FirmaKodu] AS [FirmaKodu], 
+    [VwKisiKullaniciIletisim].[FirmaUnvan] AS [FirmaUnvan], 
+    [VwKisiKullaniciIletisim].[Unvan] AS [Unvan]
+    FROM [dbo].[VwKisiKullaniciIletisim] AS [VwKisiKullaniciIletisim]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

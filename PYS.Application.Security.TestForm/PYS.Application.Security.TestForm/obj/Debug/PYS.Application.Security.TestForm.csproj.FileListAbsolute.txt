@@ -1,0 +1,14 @@
+D:\TuncGulec\Grup1\ProjeYonetimSistemi\PYS.Application.RestFull\PYS.Application.Security.TestForm\PYS.Application.Security.TestForm\obj\Debug\PYS.Application.Security.TestForm.csproj.AssemblyReference.cache
+D:\TuncGulec\Grup1\ProjeYonetimSistemi\PYS.Application.RestFull\PYS.Application.Security.TestForm\PYS.Application.Security.TestForm\obj\Debug\PYS.Application.Security.TestForm.csproj.SuggestedBindingRedirects.cache
+D:\TuncGulec\Grup1\ProjeYonetimSistemi\PYS.Application.RestFull\PYS.Application.Security.TestForm\PYS.Application.Security.TestForm\obj\Debug\PYS.Application.Security.TestForm.Form1.resources
+D:\TuncGulec\Grup1\ProjeYonetimSistemi\PYS.Application.RestFull\PYS.Application.Security.TestForm\PYS.Application.Security.TestForm\obj\Debug\PYS.Application.Security.TestForm.Properties.Resources.resources
+D:\TuncGulec\Grup1\ProjeYonetimSistemi\PYS.Application.RestFull\PYS.Application.Security.TestForm\PYS.Application.Security.TestForm\obj\Debug\PYS.Application.Security.TestForm.csproj.GenerateResource.cache
+D:\TuncGulec\Grup1\ProjeYonetimSistemi\PYS.Application.RestFull\PYS.Application.Security.TestForm\PYS.Application.Security.TestForm\obj\Debug\PYS.Application.Security.TestForm.csproj.CoreCompileInputs.cache
+D:\TuncGulec\Grup1\ProjeYonetimSistemi\PYS.Application.RestFull\PYS.Application.Security.TestForm\PYS.Application.Security.TestForm\bin\Debug\PYS.Application.Security.TestForm.exe.config
+D:\TuncGulec\Grup1\ProjeYonetimSistemi\PYS.Application.RestFull\PYS.Application.Security.TestForm\PYS.Application.Security.TestForm\bin\Debug\PYS.Application.Security.TestForm.exe
+D:\TuncGulec\Grup1\ProjeYonetimSistemi\PYS.Application.RestFull\PYS.Application.Security.TestForm\PYS.Application.Security.TestForm\bin\Debug\PYS.Application.Security.TestForm.pdb
+D:\TuncGulec\Grup1\ProjeYonetimSistemi\PYS.Application.RestFull\PYS.Application.Security.TestForm\PYS.Application.Security.TestForm\bin\Debug\PYS.Application.Security.dll
+D:\TuncGulec\Grup1\ProjeYonetimSistemi\PYS.Application.RestFull\PYS.Application.Security.TestForm\PYS.Application.Security.TestForm\bin\Debug\PYS.Application.Security.pdb
+D:\TuncGulec\Grup1\ProjeYonetimSistemi\PYS.Application.RestFull\PYS.Application.Security.TestForm\PYS.Application.Security.TestForm\obj\Debug\PYS.Application.Security.TestForm.csproj.CopyComplete
+D:\TuncGulec\Grup1\ProjeYonetimSistemi\PYS.Application.RestFull\PYS.Application.Security.TestForm\PYS.Application.Security.TestForm\obj\Debug\PYS.Application.Security.TestForm.exe
+D:\TuncGulec\Grup1\ProjeYonetimSistemi\PYS.Application.RestFull\PYS.Application.Security.TestForm\PYS.Application.Security.TestForm\obj\Debug\PYS.Application.Security.TestForm.pdb

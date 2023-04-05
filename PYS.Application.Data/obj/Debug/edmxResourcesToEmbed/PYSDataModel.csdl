@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PYSDataModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="DbPYSEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="SysAdresTipleri" EntityType="PYSDataModel.SysAdresTipleri" />
+    <EntitySet Name="SysUnvanlar" EntityType="PYSDataModel.SysUnvanlar" />
+    <EntitySet Name="TblKisi" EntityType="PYSDataModel.TblKisi" />
+    <EntitySet Name="TblKisiFirma" EntityType="PYSDataModel.TblKisiFirma" />
+    <EntitySet Name="TblKisiIletisim" EntityType="PYSDataModel.TblKisiIletisim" />
+    <EntitySet Name="TblKullanicilar" EntityType="PYSDataModel.TblKullanicilar" />
+    <EntitySet Name="VwFirmalar" EntityType="PYSDataModel.VwFirmalar" />
+    <EntitySet Name="TblFirmalar" EntityType="PYSDataModel.TblFirmalar" />
+    <EntitySet Name="VwKisiKullaniciIletisim" EntityType="PYSDataModel.VwKisiKullaniciIletisim" />
+  </EntityContainer>
+  <EntityType Name="SysAdresTipleri">
+    <Key>
+      <PropertyRef Name="IletisimTipiId" />
+    </Key>
+    <Property Name="IletisimTipiId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IletisimTipi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Adres" Type="Boolean" />
+    <Property Name="Mail" Type="Boolean" />
+    <Property Name="CepTelefonu" Type="Boolean" />
+    <Property Name="IsTelefonu" Type="Boolean" />
+    <Property Name="EvTelefonu" Type="Boolean" />
+    <Property Name="KayitTarihi" Type="DateTime" Precision="3" />
+    <Property Name="Aktif" Type="Boolean" />
+    <Property Name="Silik" Type="Boolean" />
+    <Property Name="KayitVersiyonu" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="SysUnvanlar">
+    <Key>
+      <PropertyRef Name="UnvanId" />
+    </Key>
+    <Property Name="UnvanId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Unvan" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="KayitTarihi" Type="DateTime" Precision="3" />
+    <Property Name="Aktif" Type="Boolean" />
+    <Property Name="Silik" Type="Boolean" />
+    <Property Name="KayitVersiyonu" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="TblKisi">
+    <Key>
+      <PropertyRef Name="KisiId" />
+    </Key>
+    <Property Name="KisiId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UnvanId" Type="Int32" />
+    <Property Name="Ad" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Soyad" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Tc" Type="Int64" Nullable="false" />
+    <Property Name="DogumTarihi" Type="DateTime" Precision="0" />
+    <Property Name="Cinsiyet" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="KayitTarihi" Type="DateTime" Precision="3" />
+    <Property Name="Aktif" Type="Boolean" />
+    <Property Name="Silik" Type="Boolean" />
+    <Property Name="KayitVersiyonu" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="TblKisiFirma">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KisiId" Type="Int32" Nullable="false" />
+    <Property Name="FirmaId" Type="Int32" />
+    <Property Name="KayitTarihi" Type="DateTime" Precision="3" />
+    <Property Name="Aktif" Type="Boolean" />
+    <Property Name="Silik" Type="Boolean" />
+    <Property Name="KayitVersiyonu" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="TblKisiIletisim">
+    <Key>
+      <PropertyRef Name="IletisimId" />
+    </Key>
+    <Property Name="IletisimId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IletisimTipiId" Type="Int32" />
+    <Property Name="Iletisim" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="KisiId" Type="Int32" Nullable="false" />
+    <Property Name="KayitTarihi" Type="DateTime" Precision="3" />
+    <Property Name="Aktif" Type="Boolean" />
+    <Property Name="Silik" Type="Boolean" />
+    <Property Name="KayitVersiyonu" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="TblKullanicilar">
+    <Key>
+      <PropertyRef Name="KullaniciId" />
+    </Key>
+    <Property Name="KullaniciId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KisiId" Type="Int32" Nullable="false" />
+    <Property Name="KullaniciAdi" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Sifre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Guid" Type="Guid" />
+    <Property Name="KayitTarihi" Type="DateTime" Precision="3" />
+    <Property Name="SonGirisTarihi" Type="DateTime" Precision="3" />
+    <Property Name="Aktif" Type="Boolean" />
+    <Property Name="Silik" Type="Boolean" />
+    <Property Name="KayitVersiyonu" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="VwFirmalar">
+    <Key>
+      <PropertyRef Name="FirmaId" />
+      <PropertyRef Name="FirmaUnvan" />
+    </Key>
+    <Property Name="FirmaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirmaKodu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FirmaUnvan" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="KayitTarihi" Type="DateTime" Precision="3" />
+    <Property Name="Aktif" Type="Boolean" />
+    <Property Name="Silik" Type="Boolean" />
+    <Property Name="KayitVersiyonu" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="FirmaGuid" Type="Guid" />
+  </EntityType>
+  <EntityType Name="TblFirmalar">
+    <Key>
+      <PropertyRef Name="FirmaId" />
+    </Key>
+    <Property Name="FirmaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirmaKodu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FirmaUnvan" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="KayitTarihi" Type="DateTime" Precision="3" />
+    <Property Name="Aktif" Type="Boolean" />
+    <Property Name="Silik" Type="Boolean" />
+    <Property Name="KayitVersiyonu" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="FirmaGuid" Type="Guid" />
+  </EntityType>
+  <EntityType Name="VwKisiKullaniciIletisim">
+    <Key>
+      <PropertyRef Name="KisiId" />
+      <PropertyRef Name="Ad" />
+      <PropertyRef Name="Soyad" />
+      <PropertyRef Name="Tc" />
+      <PropertyRef Name="KullaniciId" />
+      <PropertyRef Name="KullaniciAdi" />
+      <PropertyRef Name="Sifre" />
+      <PropertyRef Name="IletisimId" />
+      <PropertyRef Name="IletisimTipiId" />
+      <PropertyRef Name="FirmaUnvan" />
+    </Key>
+    <Property Name="KisiId" Type="Int32" Nullable="false" />
+    <Property Name="UnvanId" Type="Int32" />
+    <Property Name="Ad" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Soyad" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Tc" Type="Int64" Nullable="false" />
+    <Property Name="DogumTarihi" Type="DateTime" Precision="0" />
+    <Property Name="Cinsiyet" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="KayitTarihi" Type="DateTime" Precision="3" />
+    <Property Name="Aktif" Type="Boolean" />
+    <Property Name="Silik" Type="Boolean" />
+    <Property Name="KayitVersiyonu" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="KullaniciId" Type="Int32" Nullable="false" />
+    <Property Name="KullaniciAdi" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Sifre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Guid" Type="Guid" />
+    <Property Name="IletisimId" Type="Int32" Nullable="false" />
+    <Property Name="IletisimTipiId" Type="Int32" Nullable="false" />
+    <Property Name="IletisimTipi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Iletisim" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FirmaKodu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FirmaUnvan" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Unvan" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

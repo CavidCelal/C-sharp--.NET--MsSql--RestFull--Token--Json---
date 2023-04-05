@@ -1,0 +1,12 @@
+D:\TuncGulec\Grup1\ProjeYonetimSistemi\PYS.Application.RestFull\PYS.Application.Data\bin\Debug\PYS.Application.Data.dll.config
+D:\TuncGulec\Grup1\ProjeYonetimSistemi\PYS.Application.RestFull\PYS.Application.Data\bin\Debug\PYS.Application.Data.dll
+D:\TuncGulec\Grup1\ProjeYonetimSistemi\PYS.Application.RestFull\PYS.Application.Data\bin\Debug\PYS.Application.Data.pdb
+D:\TuncGulec\Grup1\ProjeYonetimSistemi\PYS.Application.RestFull\PYS.Application.Data\bin\Debug\EntityFramework.dll
+D:\TuncGulec\Grup1\ProjeYonetimSistemi\PYS.Application.RestFull\PYS.Application.Data\bin\Debug\EntityFramework.SqlServer.dll
+D:\TuncGulec\Grup1\ProjeYonetimSistemi\PYS.Application.RestFull\PYS.Application.Data\bin\Debug\EntityFramework.xml
+D:\TuncGulec\Grup1\ProjeYonetimSistemi\PYS.Application.RestFull\PYS.Application.Data\bin\Debug\EntityFramework.SqlServer.xml
+D:\TuncGulec\Grup1\ProjeYonetimSistemi\PYS.Application.RestFull\PYS.Application.Data\obj\Debug\PYS.Application.Data.csproj.AssemblyReference.cache
+D:\TuncGulec\Grup1\ProjeYonetimSistemi\PYS.Application.RestFull\PYS.Application.Data\obj\Debug\PYS.Application.Data.csproj.CoreCompileInputs.cache
+D:\TuncGulec\Grup1\ProjeYonetimSistemi\PYS.Application.RestFull\PYS.Application.Data\obj\Debug\PYS.Application.Data.csproj.CopyComplete
+D:\TuncGulec\Grup1\ProjeYonetimSistemi\PYS.Application.RestFull\PYS.Application.Data\obj\Debug\PYS.Application.Data.dll
+D:\TuncGulec\Grup1\ProjeYonetimSistemi\PYS.Application.RestFull\PYS.Application.Data\obj\Debug\PYS.Application.Data.pdb

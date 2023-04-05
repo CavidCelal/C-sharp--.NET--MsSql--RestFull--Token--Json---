@@ -1,0 +1,6 @@
+D:\TuncGulec\Grup1\ProjeYonetimSistemi\PYS.Application.RestFull\PYS.Application.Security\bin\Debug\PYS.Application.Security.dll
+D:\TuncGulec\Grup1\ProjeYonetimSistemi\PYS.Application.RestFull\PYS.Application.Security\bin\Debug\PYS.Application.Security.pdb
+D:\TuncGulec\Grup1\ProjeYonetimSistemi\PYS.Application.RestFull\PYS.Application.Security\obj\Debug\PYS.Application.Security.csproj.AssemblyReference.cache
+D:\TuncGulec\Grup1\ProjeYonetimSistemi\PYS.Application.RestFull\PYS.Application.Security\obj\Debug\PYS.Application.Security.csproj.CoreCompileInputs.cache
+D:\TuncGulec\Grup1\ProjeYonetimSistemi\PYS.Application.RestFull\PYS.Application.Security\obj\Debug\PYS.Application.Security.dll
+D:\TuncGulec\Grup1\ProjeYonetimSistemi\PYS.Application.RestFull\PYS.Application.Security\obj\Debug\PYS.Application.Security.pdb

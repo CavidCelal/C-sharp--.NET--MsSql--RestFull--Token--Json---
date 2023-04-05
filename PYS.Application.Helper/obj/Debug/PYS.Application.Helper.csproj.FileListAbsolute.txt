@@ -1,0 +1,6 @@
+D:\TuncGulec\Grup1\ProjeYonetimSistemi\PYS.Application.RestFull\PYS.Application.Helper\bin\Debug\PYS.Application.Helper.dll
+D:\TuncGulec\Grup1\ProjeYonetimSistemi\PYS.Application.RestFull\PYS.Application.Helper\bin\Debug\PYS.Application.Helper.pdb
+D:\TuncGulec\Grup1\ProjeYonetimSistemi\PYS.Application.RestFull\PYS.Application.Helper\obj\Debug\PYS.Application.Helper.csproj.AssemblyReference.cache
+D:\TuncGulec\Grup1\ProjeYonetimSistemi\PYS.Application.RestFull\PYS.Application.Helper\obj\Debug\PYS.Application.Helper.csproj.CoreCompileInputs.cache
+D:\TuncGulec\Grup1\ProjeYonetimSistemi\PYS.Application.RestFull\PYS.Application.Helper\obj\Debug\PYS.Application.Helper.dll
+D:\TuncGulec\Grup1\ProjeYonetimSistemi\PYS.Application.RestFull\PYS.Application.Helper\obj\Debug\PYS.Application.Helper.pdb

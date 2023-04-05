@@ -1,0 +1,1085 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3DDF4E6D-C3AC-4ABC-B303-83127656AE12}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PYS.Application.Web</RootNamespace>
+    <AssemblyName>PYS.Application.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44347</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.7.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=3.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json.Bson, Version=1.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.Bson.1.0.2\lib\net45\Newtonsoft.Json.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=108.0.3.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.108.0.3\lib\netstandard2.0\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=4.1.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.4.3.4\lib\net46\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.4.3.0\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.5.0.0\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=5.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.5.0.1\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.9\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.9\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.9\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.9\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.9\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.2.0.1\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.9\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\css\app.min.css" />
+    <Content Include="assets\css\bootstrap.min.css" />
+    <Content Include="assets\css\custom.min.css" />
+    <Content Include="assets\css\dark.css" />
+    <Content Include="assets\css\icons.min.css" />
+    <Content Include="assets\css\sweetalert2.min.css" />
+    <Content Include="assets\fonts\boxicons.html" />
+    <Content Include="assets\fonts\boxiconsd41d.svg" />
+    <Content Include="assets\fonts\la-brands-400.html" />
+    <Content Include="assets\fonts\la-brands-400.svg" />
+    <Content Include="assets\fonts\la-regular-400.html" />
+    <Content Include="assets\fonts\la-regular-400.svg" />
+    <Content Include="assets\fonts\la-solid-900.html" />
+    <Content Include="assets\fonts\la-solid-900.svg" />
+    <Content Include="assets\fonts\materialdesignicons-webfont1d2d.html" />
+    <Content Include="assets\fonts\remixicondf6d.html" />
+    <Content Include="assets\fonts\remixicondf6d.svg" />
+    <Content Include="assets\images\about.jpg" />
+    <Content Include="assets\images\auth-one-bg.jpg" />
+    <Content Include="assets\images\bg-d.png" />
+    <Content Include="assets\images\brands\bitbucket.png" />
+    <Content Include="assets\images\brands\dribbble.png" />
+    <Content Include="assets\images\brands\dropbox.png" />
+    <Content Include="assets\images\brands\github.png" />
+    <Content Include="assets\images\brands\mail_chimp.png" />
+    <Content Include="assets\images\brands\slack.png" />
+    <Content Include="assets\images\clients\amazon.svg" />
+    <Content Include="assets\images\clients\lenovo.svg" />
+    <Content Include="assets\images\clients\paypal.svg" />
+    <Content Include="assets\images\clients\shopify.svg" />
+    <Content Include="assets\images\clients\verizon.svg" />
+    <Content Include="assets\images\clients\walmart.svg" />
+    <Content Include="assets\images\comingsoon.png" />
+    <Content Include="assets\images\companies\img-1.png" />
+    <Content Include="assets\images\companies\img-2.png" />
+    <Content Include="assets\images\companies\img-3.png" />
+    <Content Include="assets\images\companies\img-4.png" />
+    <Content Include="assets\images\companies\img-5.png" />
+    <Content Include="assets\images\companies\img-6.png" />
+    <Content Include="assets\images\companies\img-7.png" />
+    <Content Include="assets\images\companies\img-8.png" />
+    <Content Include="assets\images\companies\img-9.png" />
+    <Content Include="assets\images\demos\creative.png" />
+    <Content Include="assets\images\demos\default.png" />
+    <Content Include="assets\images\demos\interactive.png" />
+    <Content Include="assets\images\demos\material.png" />
+    <Content Include="assets\images\demos\minimal.png" />
+    <Content Include="assets\images\demos\modern.png" />
+    <Content Include="assets\images\demos\saas.png" />
+    <Content Include="assets\images\error.svg" />
+    <Content Include="assets\images\error400-cover.png" />
+    <Content Include="assets\images\error500.png" />
+    <Content Include="assets\images\faq-img.png" />
+    <Content Include="assets\images\favicon.ico" />
+    <Content Include="assets\images\flags\ae.svg" />
+    <Content Include="assets\images\flags\china.svg" />
+    <Content Include="assets\images\flags\french.svg" />
+    <Content Include="assets\images\flags\germany.svg" />
+    <Content Include="assets\images\flags\italy.svg" />
+    <Content Include="assets\images\flags\russia.svg" />
+    <Content Include="assets\images\flags\spain.svg" />
+    <Content Include="assets\images\flags\us.svg" />
+    <Content Include="assets\images\giftbox.png" />
+    <Content Include="assets\images\illustrator-1.png" />
+    <Content Include="assets\images\job-profile2.png" />
+    <Content Include="assets\images\landing\features\img-1.png" />
+    <Content Include="assets\images\landing\features\img-2.png" />
+    <Content Include="assets\images\landing\features\img-3.png" />
+    <Content Include="assets\images\landing\img-pattern.png" />
+    <Content Include="assets\images\landing\process-arrow-img.png" />
+    <Content Include="assets\images\logo-dark.png" />
+    <Content Include="assets\images\logo-light.png" />
+    <Content Include="assets\images\logo-sm.png" />
+    <Content Include="assets\images\mac-img.png" />
+    <Content Include="assets\images\maintenance.png" />
+    <Content Include="assets\images\modals\login.png" />
+    <Content Include="assets\images\modals\signup.png" />
+    <Content Include="assets\images\modals\subscribe.png" />
+    <Content Include="assets\images\modals\success-payment.png" />
+    <Content Include="assets\images\new-document.png" />
+    <Content Include="assets\images\nft\add.png" />
+    <Content Include="assets\images\nft\bg-pattern.png" />
+    <Content Include="assets\images\nft\img-01.jpg" />
+    <Content Include="assets\images\nft\img-02.jpg" />
+    <Content Include="assets\images\nft\img-03.jpg" />
+    <Content Include="assets\images\nft\img-04.jpg" />
+    <Content Include="assets\images\nft\img-05.jpg" />
+    <Content Include="assets\images\nft\img-06.jpg" />
+    <Content Include="assets\images\nft\money.png" />
+    <Content Include="assets\images\nft\sell.png" />
+    <Content Include="assets\images\nft\wallet.png" />
+    <Content Include="assets\images\nft\wallet\alpha.png" />
+    <Content Include="assets\images\nft\wallet\binance.png" />
+    <Content Include="assets\images\nft\wallet\coinbase.png" />
+    <Content Include="assets\images\nft\wallet\enjin.png" />
+    <Content Include="assets\images\nft\wallet\kukai.png" />
+    <Content Include="assets\images\nft\wallet\math.png" />
+    <Content Include="assets\images\nft\wallet\metamask.png" />
+    <Content Include="assets\images\products\img-1.png" />
+    <Content Include="assets\images\products\img-10.png" />
+    <Content Include="assets\images\products\img-2.png" />
+    <Content Include="assets\images\products\img-3.png" />
+    <Content Include="assets\images\products\img-4.png" />
+    <Content Include="assets\images\products\img-5.png" />
+    <Content Include="assets\images\products\img-6.png" />
+    <Content Include="assets\images\products\img-7.png" />
+    <Content Include="assets\images\products\img-8.png" />
+    <Content Include="assets\images\profile-bg.jpg" />
+    <Content Include="assets\images\sidebar\img-1.jpg" />
+    <Content Include="assets\images\sidebar\img-2.jpg" />
+    <Content Include="assets\images\sidebar\img-3.jpg" />
+    <Content Include="assets\images\sidebar\img-4.jpg" />
+    <Content Include="assets\images\small\img-1.jpg" />
+    <Content Include="assets\images\small\img-10.jpg" />
+    <Content Include="assets\images\small\img-11.jpg" />
+    <Content Include="assets\images\small\img-12.jpg" />
+    <Content Include="assets\images\small\img-2.jpg" />
+    <Content Include="assets\images\small\img-3.jpg" />
+    <Content Include="assets\images\small\img-4.jpg" />
+    <Content Include="assets\images\small\img-5.jpg" />
+    <Content Include="assets\images\small\img-6.jpg" />
+    <Content Include="assets\images\small\img-7.jpg" />
+    <Content Include="assets\images\small\img-8.jpg" />
+    <Content Include="assets\images\small\img-9.jpg" />
+    <Content Include="assets\images\svg\bell.svg" />
+    <Content Include="assets\images\svg\crypto-icons\%24pac.svg" />
+    <Content Include="assets\images\svg\crypto-icons\0xbtc.svg" />
+    <Content Include="assets\images\svg\crypto-icons\2give.svg" />
+    <Content Include="assets\images\svg\crypto-icons\aave.svg" />
+    <Content Include="assets\images\svg\crypto-icons\abt.svg" />
+    <Content Include="assets\images\svg\crypto-icons\act.svg" />
+    <Content Include="assets\images\svg\crypto-icons\actn.svg" />
+    <Content Include="assets\images\svg\crypto-icons\ada.svg" />
+    <Content Include="assets\images\svg\crypto-icons\add.svg" />
+    <Content Include="assets\images\svg\crypto-icons\adx.svg" />
+    <Content Include="assets\images\svg\crypto-icons\ae.svg" />
+    <Content Include="assets\images\svg\crypto-icons\aeon.svg" />
+    <Content Include="assets\images\svg\crypto-icons\aeur.svg" />
+    <Content Include="assets\images\svg\crypto-icons\agi.svg" />
+    <Content Include="assets\images\svg\crypto-icons\agrs.svg" />
+    <Content Include="assets\images\svg\crypto-icons\aion.svg" />
+    <Content Include="assets\images\svg\crypto-icons\algo.svg" />
+    <Content Include="assets\images\svg\crypto-icons\amb.svg" />
+    <Content Include="assets\images\svg\crypto-icons\amp.svg" />
+    <Content Include="assets\images\svg\crypto-icons\ampl.svg" />
+    <Content Include="assets\images\svg\crypto-icons\ankr.svg" />
+    <Content Include="assets\images\svg\crypto-icons\ant.svg" />
+    <Content Include="assets\images\svg\crypto-icons\apex.svg" />
+    <Content Include="assets\images\svg\crypto-icons\appc.svg" />
+    <Content Include="assets\images\svg\crypto-icons\ardr.svg" />
+    <Content Include="assets\images\svg\crypto-icons\arg.svg" />
+    <Content Include="assets\images\svg\crypto-icons\ark.svg" />
+    <Content Include="assets\images\svg\crypto-icons\arn.svg" />
+    <Content Include="assets\images\svg\crypto-icons\arnx.svg" />
+    <Content Include="assets\images\svg\crypto-icons\ary.svg" />
+    <Content Include="assets\images\svg\crypto-icons\ast.svg" />
+    <Content Include="assets\images\svg\crypto-icons\atm.svg" />
+    <Content Include="assets\images\svg\crypto-icons\atom.svg" />
+    <Content Include="assets\images\svg\crypto-icons\audr.svg" />
+    <Content Include="assets\images\svg\crypto-icons\auto.svg" />
+    <Content Include="assets\images\svg\crypto-icons\aywa.svg" />
+    <Content Include="assets\images\svg\crypto-icons\bab.svg" />
+    <Content Include="assets\images\svg\crypto-icons\bal.svg" />
+    <Content Include="assets\images\svg\crypto-icons\band.svg" />
+    <Content Include="assets\images\svg\crypto-icons\bat.svg" />
+    <Content Include="assets\images\svg\crypto-icons\bay.svg" />
+    <Content Include="assets\images\svg\crypto-icons\bcbc.svg" />
+    <Content Include="assets\images\svg\crypto-icons\bcc.svg" />
+    <Content Include="assets\images\svg\crypto-icons\bcd.svg" />
+    <Content Include="assets\images\svg\crypto-icons\bch.svg" />
+    <Content Include="assets\images\svg\crypto-icons\bcio.svg" />
+    <Content Include="assets\images\svg\crypto-icons\bcn.svg" />
+    <Content Include="assets\images\svg\crypto-icons\bco.svg" />
+    <Content Include="assets\images\svg\crypto-icons\bcpt.svg" />
+    <Content Include="assets\images\svg\crypto-icons\bdl.svg" />
+    <Content Include="assets\images\svg\crypto-icons\beam.svg" />
+    <Content Include="assets\images\svg\crypto-icons\bela.svg" />
+    <Content Include="assets\images\svg\crypto-icons\bix.svg" />
+    <Content Include="assets\images\svg\crypto-icons\blcn.svg" />
+    <Content Include="assets\images\svg\crypto-icons\blk.svg" />
+    <Content Include="assets\images\svg\crypto-icons\block.svg" />
+    <Content Include="assets\images\svg\crypto-icons\blz.svg" />
+    <Content Include="assets\images\svg\crypto-icons\bnb.svg" />
+    <Content Include="assets\images\svg\crypto-icons\bnt.svg" />
+    <Content Include="assets\images\svg\crypto-icons\bnty.svg" />
+    <Content Include="assets\images\svg\crypto-icons\booty.svg" />
+    <Content Include="assets\images\svg\crypto-icons\bos.svg" />
+    <Content Include="assets\images\svg\crypto-icons\bpt.svg" />
+    <Content Include="assets\images\svg\crypto-icons\bq.svg" />
+    <Content Include="assets\images\svg\crypto-icons\brd.svg" />
+    <Content Include="assets\images\svg\crypto-icons\bsd.svg" />
+    <Content Include="assets\images\svg\crypto-icons\bsv.svg" />
+    <Content Include="assets\images\svg\crypto-icons\btc.svg" />
+    <Content Include="assets\images\svg\crypto-icons\btcd.svg" />
+    <Content Include="assets\images\svg\crypto-icons\btch.svg" />
+    <Content Include="assets\images\svg\crypto-icons\btcp.svg" />
+    <Content Include="assets\images\svg\crypto-icons\btcz.svg" />
+    <Content Include="assets\images\svg\crypto-icons\btdx.svg" />
+    <Content Include="assets\images\svg\crypto-icons\btg.svg" />
+    <Content Include="assets\images\svg\crypto-icons\btm.svg" />
+    <Content Include="assets\images\svg\crypto-icons\bts.svg" />
+    <Content Include="assets\images\svg\crypto-icons\btt.svg" />
+    <Content Include="assets\images\svg\crypto-icons\btx.svg" />
+    <Content Include="assets\images\svg\crypto-icons\burst.svg" />
+    <Content Include="assets\images\svg\crypto-icons\bze.svg" />
+    <Content Include="assets\images\svg\crypto-icons\call.svg" />
+    <Content Include="assets\images\svg\crypto-icons\cc.svg" />
+    <Content Include="assets\images\svg\crypto-icons\cdn.svg" />
+    <Content Include="assets\images\svg\crypto-icons\cdt.svg" />
+    <Content Include="assets\images\svg\crypto-icons\cenz.svg" />
+    <Content Include="assets\images\svg\crypto-icons\chain.svg" />
+    <Content Include="assets\images\svg\crypto-icons\chat.svg" />
+    <Content Include="assets\images\svg\crypto-icons\chips.svg" />
+    <Content Include="assets\images\svg\crypto-icons\chsb.svg" />
+    <Content Include="assets\images\svg\crypto-icons\cix.svg" />
+    <Content Include="assets\images\svg\crypto-icons\clam.svg" />
+    <Content Include="assets\images\svg\crypto-icons\cloak.svg" />
+    <Content Include="assets\images\svg\crypto-icons\cmm.svg" />
+    <Content Include="assets\images\svg\crypto-icons\cmt.svg" />
+    <Content Include="assets\images\svg\crypto-icons\cnd.svg" />
+    <Content Include="assets\images\svg\crypto-icons\cnx.svg" />
+    <Content Include="assets\images\svg\crypto-icons\cny.svg" />
+    <Content Include="assets\images\svg\crypto-icons\cob.svg" />
+    <Content Include="assets\images\svg\crypto-icons\colx.svg" />
+    <Content Include="assets\images\svg\crypto-icons\comp.svg" />
+    <Content Include="assets\images\svg\crypto-icons\coqui.svg" />
+    <Content Include="assets\images\svg\crypto-icons\cred.svg" />
+    <Content Include="assets\images\svg\crypto-icons\crpt.svg" />
+    <Content Include="assets\images\svg\crypto-icons\crv.svg" />
+    <Content Include="assets\images\svg\crypto-icons\crw.svg" />
+    <Content Include="assets\images\svg\crypto-icons\cs.svg" />
+    <Content Include="assets\images\svg\crypto-icons\ctr.svg" />
+    <Content Include="assets\images\svg\crypto-icons\ctxc.svg" />
+    <Content Include="assets\images\svg\crypto-icons\cvc.svg" />
+    <Content Include="assets\images\svg\crypto-icons\d.svg" />
+    <Content Include="assets\images\svg\crypto-icons\dai.svg" />
+    <Content Include="assets\images\svg\crypto-icons\dash.svg" />
+    <Content Include="assets\images\svg\crypto-icons\dat.svg" />
+    <Content Include="assets\images\svg\crypto-icons\data.svg" />
+    <Content Include="assets\images\svg\crypto-icons\dbc.svg" />
+    <Content Include="assets\images\svg\crypto-icons\dcn.svg" />
+    <Content Include="assets\images\svg\crypto-icons\dcr.svg" />
+    <Content Include="assets\images\svg\crypto-icons\deez.svg" />
+    <Content Include="assets\images\svg\crypto-icons\dent.svg" />
+    <Content Include="assets\images\svg\crypto-icons\dew.svg" />
+    <Content Include="assets\images\svg\crypto-icons\dgb.svg" />
+    <Content Include="assets\images\svg\crypto-icons\dgd.svg" />
+    <Content Include="assets\images\svg\crypto-icons\dlt.svg" />
+    <Content Include="assets\images\svg\crypto-icons\dnt.svg" />
+    <Content Include="assets\images\svg\crypto-icons\dock.svg" />
+    <Content Include="assets\images\svg\crypto-icons\doge.svg" />
+    <Content Include="assets\images\svg\crypto-icons\dot.svg" />
+    <Content Include="assets\images\svg\crypto-icons\drgn.svg" />
+    <Content Include="assets\images\svg\crypto-icons\drop.svg" />
+    <Content Include="assets\images\svg\crypto-icons\dta.svg" />
+    <Content Include="assets\images\svg\crypto-icons\dth.svg" />
+    <Content Include="assets\images\svg\crypto-icons\dtr.svg" />
+    <Content Include="assets\images\svg\crypto-icons\ebst.svg" />
+    <Content Include="assets\images\svg\crypto-icons\eca.svg" />
+    <Content Include="assets\images\svg\crypto-icons\edg.svg" />
+    <Content Include="assets\images\svg\crypto-icons\edo.svg" />
+    <Content Include="assets\images\svg\crypto-icons\edoge.svg" />
+    <Content Include="assets\images\svg\crypto-icons\ela.svg" />
+    <Content Include="assets\images\svg\crypto-icons\elec.svg" />
+    <Content Include="assets\images\svg\crypto-icons\elf.svg" />
+    <Content Include="assets\images\svg\crypto-icons\elix.svg" />
+    <Content Include="assets\images\svg\crypto-icons\ella.svg" />
+    <Content Include="assets\images\svg\crypto-icons\emb.svg" />
+    <Content Include="assets\images\svg\crypto-icons\emc.svg" />
+    <Content Include="assets\images\svg\crypto-icons\emc2.svg" />
+    <Content Include="assets\images\svg\crypto-icons\eng.svg" />
+    <Content Include="assets\images\svg\crypto-icons\enj.svg" />
+    <Content Include="assets\images\svg\crypto-icons\entrp.svg" />
+    <Content Include="assets\images\svg\crypto-icons\eon.svg" />
+    <Content Include="assets\images\svg\crypto-icons\eop.svg" />
+    <Content Include="assets\images\svg\crypto-icons\eos.svg" />
+    <Content Include="assets\images\svg\crypto-icons\eqli.svg" />
+    <Content Include="assets\images\svg\crypto-icons\equa.svg" />
+    <Content Include="assets\images\svg\crypto-icons\etc.svg" />
+    <Content Include="assets\images\svg\crypto-icons\eth.svg" />
+    <Content Include="assets\images\svg\crypto-icons\ethos.svg" />
+    <Content Include="assets\images\svg\crypto-icons\etn.svg" />
+    <Content Include="assets\images\svg\crypto-icons\etp.svg" />
+    <Content Include="assets\images\svg\crypto-icons\eur.svg" />
+    <Content Include="assets\images\svg\crypto-icons\evx.svg" />
+    <Content Include="assets\images\svg\crypto-icons\exmo.svg" />
+    <Content Include="assets\images\svg\crypto-icons\exp.svg" />
+    <Content Include="assets\images\svg\crypto-icons\fair.svg" />
+    <Content Include="assets\images\svg\crypto-icons\fct.svg" />
+    <Content Include="assets\images\svg\crypto-icons\fil.svg" />
+    <Content Include="assets\images\svg\crypto-icons\fjc.svg" />
+    <Content Include="assets\images\svg\crypto-icons\fldc.svg" />
+    <Content Include="assets\images\svg\crypto-icons\flo.svg" />
+    <Content Include="assets\images\svg\crypto-icons\flux.svg" />
+    <Content Include="assets\images\svg\crypto-icons\fsn.svg" />
+    <Content Include="assets\images\svg\crypto-icons\ftc.svg" />
+    <Content Include="assets\images\svg\crypto-icons\fuel.svg" />
+    <Content Include="assets\images\svg\crypto-icons\fun.svg" />
+    <Content Include="assets\images\svg\crypto-icons\game.svg" />
+    <Content Include="assets\images\svg\crypto-icons\gas.svg" />
+    <Content Include="assets\images\svg\crypto-icons\gbp.svg" />
+    <Content Include="assets\images\svg\crypto-icons\gbx.svg" />
+    <Content Include="assets\images\svg\crypto-icons\gbyte.svg" />
+    <Content Include="assets\images\svg\crypto-icons\generic.svg" />
+    <Content Include="assets\images\svg\crypto-icons\gin.svg" />
+    <Content Include="assets\images\svg\crypto-icons\glxt.svg" />
+    <Content Include="assets\images\svg\crypto-icons\gmr.svg" />
+    <Content Include="assets\images\svg\crypto-icons\gno.svg" />
+    <Content Include="assets\images\svg\crypto-icons\gnt.svg" />
+    <Content Include="assets\images\svg\crypto-icons\gold.svg" />
+    <Content Include="assets\images\svg\crypto-icons\grc.svg" />
+    <Content Include="assets\images\svg\crypto-icons\grin.svg" />
+    <Content Include="assets\images\svg\crypto-icons\grs.svg" />
+    <Content Include="assets\images\svg\crypto-icons\grt.svg" />
+    <Content Include="assets\images\svg\crypto-icons\gsc.svg" />
+    <Content Include="assets\images\svg\crypto-icons\gto.svg" />
+    <Content Include="assets\images\svg\crypto-icons\gup.svg" />
+    <Content Include="assets\images\svg\crypto-icons\gusd.svg" />
+    <Content Include="assets\images\svg\crypto-icons\gvt.svg" />
+    <Content Include="assets\images\svg\crypto-icons\gxs.svg" />
+    <Content Include="assets\images\svg\crypto-icons\gzr.svg" />
+    <Content Include="assets\images\svg\crypto-icons\hight.svg" />
+    <Content Include="assets\images\svg\crypto-icons\hns.svg" />
+    <Content Include="assets\images\svg\crypto-icons\hodl.svg" />
+    <Content Include="assets\images\svg\crypto-icons\hot.svg" />
+    <Content Include="assets\images\svg\crypto-icons\hpb.svg" />
+    <Content Include="assets\images\svg\crypto-icons\hsr.svg" />
+    <Content Include="assets\images\svg\crypto-icons\ht.svg" />
+    <Content Include="assets\images\svg\crypto-icons\html.svg" />
+    <Content Include="assets\images\svg\crypto-icons\huc.svg" />
+    <Content Include="assets\images\svg\crypto-icons\husd.svg" />
+    <Content Include="assets\images\svg\crypto-icons\hush.svg" />
+    <Content Include="assets\images\svg\crypto-icons\icn.svg" />
+    <Content Include="assets\images\svg\crypto-icons\icp.svg" />
+    <Content Include="assets\images\svg\crypto-icons\icx.svg" />
+    <Content Include="assets\images\svg\crypto-icons\ignis.svg" />
+    <Content Include="assets\images\svg\crypto-icons\ilk.svg" />
+    <Content Include="assets\images\svg\crypto-icons\ink.svg" />
+    <Content Include="assets\images\svg\crypto-icons\ins.svg" />
+    <Content Include="assets\images\svg\crypto-icons\ion.svg" />
+    <Content Include="assets\images\svg\crypto-icons\iop.svg" />
+    <Content Include="assets\images\svg\crypto-icons\iost.svg" />
+    <Content Include="assets\images\svg\crypto-icons\iotx.svg" />
+    <Content Include="assets\images\svg\crypto-icons\iq.svg" />
+    <Content Include="assets\images\svg\crypto-icons\itc.svg" />
+    <Content Include="assets\images\svg\crypto-icons\jnt.svg" />
+    <Content Include="assets\images\svg\crypto-icons\jpy.svg" />
+    <Content Include="assets\images\svg\crypto-icons\kcs.svg" />
+    <Content Include="assets\images\svg\crypto-icons\kin.svg" />
+    <Content Include="assets\images\svg\crypto-icons\klown.svg" />
+    <Content Include="assets\images\svg\crypto-icons\kmd.svg" />
+    <Content Include="assets\images\svg\crypto-icons\knc.svg" />
+    <Content Include="assets\images\svg\crypto-icons\krb.svg" />
+    <Content Include="assets\images\svg\crypto-icons\ksm.svg" />
+    <Content Include="assets\images\svg\crypto-icons\lbc.svg" />
+    <Content Include="assets\images\svg\crypto-icons\lend.svg" />
+    <Content Include="assets\images\svg\crypto-icons\leo.svg" />
+    <Content Include="assets\images\svg\crypto-icons\link.svg" />
+    <Content Include="assets\images\svg\crypto-icons\lkk.svg" />
+    <Content Include="assets\images\svg\crypto-icons\loom.svg" />
+    <Content Include="assets\images\svg\crypto-icons\lpt.svg" />
+    <Content Include="assets\images\svg\crypto-icons\lrc.svg" />
+    <Content Include="assets\images\svg\crypto-icons\lsk.svg" />
+    <Content Include="assets\images\svg\crypto-icons\ltc.svg" />
+    <Content Include="assets\images\svg\crypto-icons\lun.svg" />
+    <Content Include="assets\images\svg\crypto-icons\maid.svg" />
+    <Content Include="assets\images\svg\crypto-icons\mana.svg" />
+    <Content Include="assets\images\svg\crypto-icons\matic.svg" />
+    <Content Include="assets\images\svg\crypto-icons\max.svg" />
+    <Content Include="assets\images\svg\crypto-icons\mcap.svg" />
+    <Content Include="assets\images\svg\crypto-icons\mco.svg" />
+    <Content Include="assets\images\svg\crypto-icons\mda.svg" />
+    <Content Include="assets\images\svg\crypto-icons\mds.svg" />
+    <Content Include="assets\images\svg\crypto-icons\med.svg" />
+    <Content Include="assets\images\svg\crypto-icons\meetone.svg" />
+    <Content Include="assets\images\svg\crypto-icons\mft.svg" />
+    <Content Include="assets\images\svg\crypto-icons\miota.svg" />
+    <Content Include="assets\images\svg\crypto-icons\mith.svg" />
+    <Content Include="assets\images\svg\crypto-icons\mkr.svg" />
+    <Content Include="assets\images\svg\crypto-icons\mln.svg" />
+    <Content Include="assets\images\svg\crypto-icons\mnx.svg" />
+    <Content Include="assets\images\svg\crypto-icons\mnz.svg" />
+    <Content Include="assets\images\svg\crypto-icons\moac.svg" />
+    <Content Include="assets\images\svg\crypto-icons\mod.svg" />
+    <Content Include="assets\images\svg\crypto-icons\mona.svg" />
+    <Content Include="assets\images\svg\crypto-icons\msr.svg" />
+    <Content Include="assets\images\svg\crypto-icons\mth.svg" />
+    <Content Include="assets\images\svg\crypto-icons\mtl.svg" />
+    <Content Include="assets\images\svg\crypto-icons\music.svg" />
+    <Content Include="assets\images\svg\crypto-icons\mzc.svg" />
+    <Content Include="assets\images\svg\crypto-icons\nano.svg" />
+    <Content Include="assets\images\svg\crypto-icons\nas.svg" />
+    <Content Include="assets\images\svg\crypto-icons\nav.svg" />
+    <Content Include="assets\images\svg\crypto-icons\ncash.svg" />
+    <Content Include="assets\images\svg\crypto-icons\ndz.svg" />
+    <Content Include="assets\images\svg\crypto-icons\nebl.svg" />
+    <Content Include="assets\images\svg\crypto-icons\neo.svg" />
+    <Content Include="assets\images\svg\crypto-icons\neos.svg" />
+    <Content Include="assets\images\svg\crypto-icons\neu.svg" />
+    <Content Include="assets\images\svg\crypto-icons\nexo.svg" />
+    <Content Include="assets\images\svg\crypto-icons\ngc.svg" />
+    <Content Include="assets\images\svg\crypto-icons\nio.svg" />
+    <Content Include="assets\images\svg\crypto-icons\nkn.svg" />
+    <Content Include="assets\images\svg\crypto-icons\nlc2.svg" />
+    <Content Include="assets\images\svg\crypto-icons\nlg.svg" />
+    <Content Include="assets\images\svg\crypto-icons\nmc.svg" />
+    <Content Include="assets\images\svg\crypto-icons\nmr.svg" />
+    <Content Include="assets\images\svg\crypto-icons\npxs.svg" />
+    <Content Include="assets\images\svg\crypto-icons\ntbc.svg" />
+    <Content Include="assets\images\svg\crypto-icons\nuls.svg" />
+    <Content Include="assets\images\svg\crypto-icons\nxs.svg" />
+    <Content Include="assets\images\svg\crypto-icons\nxt.svg" />
+    <Content Include="assets\images\svg\crypto-icons\oax.svg" />
+    <Content Include="assets\images\svg\crypto-icons\ok.svg" />
+    <Content Include="assets\images\svg\crypto-icons\omg.svg" />
+    <Content Include="assets\images\svg\crypto-icons\omni.svg" />
+    <Content Include="assets\images\svg\crypto-icons\one.svg" />
+    <Content Include="assets\images\svg\crypto-icons\ong.svg" />
+    <Content Include="assets\images\svg\crypto-icons\ont.svg" />
+    <Content Include="assets\images\svg\crypto-icons\oot.svg" />
+    <Content Include="assets\images\svg\crypto-icons\ost.svg" />
+    <Content Include="assets\images\svg\crypto-icons\ox.svg" />
+    <Content Include="assets\images\svg\crypto-icons\oxt.svg" />
+    <Content Include="assets\images\svg\crypto-icons\part.svg" />
+    <Content Include="assets\images\svg\crypto-icons\pasc.svg" />
+    <Content Include="assets\images\svg\crypto-icons\pasl.svg" />
+    <Content Include="assets\images\svg\crypto-icons\pax.svg" />
+    <Content Include="assets\images\svg\crypto-icons\paxg.svg" />
+    <Content Include="assets\images\svg\crypto-icons\pay.svg" />
+    <Content Include="assets\images\svg\crypto-icons\payx.svg" />
+    <Content Include="assets\images\svg\crypto-icons\pink.svg" />
+    <Content Include="assets\images\svg\crypto-icons\pirl.svg" />
+    <Content Include="assets\images\svg\crypto-icons\pivx.svg" />
+    <Content Include="assets\images\svg\crypto-icons\plr.svg" />
+    <Content Include="assets\images\svg\crypto-icons\poa.svg" />
+    <Content Include="assets\images\svg\crypto-icons\poe.svg" />
+    <Content Include="assets\images\svg\crypto-icons\polis.svg" />
+    <Content Include="assets\images\svg\crypto-icons\poly.svg" />
+    <Content Include="assets\images\svg\crypto-icons\pot.svg" />
+    <Content Include="assets\images\svg\crypto-icons\powr.svg" />
+    <Content Include="assets\images\svg\crypto-icons\ppc.svg" />
+    <Content Include="assets\images\svg\crypto-icons\ppp.svg" />
+    <Content Include="assets\images\svg\crypto-icons\ppt.svg" />
+    <Content Include="assets\images\svg\crypto-icons\pre.svg" />
+    <Content Include="assets\images\svg\crypto-icons\prl.svg" />
+    <Content Include="assets\images\svg\crypto-icons\pungo.svg" />
+    <Content Include="assets\images\svg\crypto-icons\pura.svg" />
+    <Content Include="assets\images\svg\crypto-icons\qash.svg" />
+    <Content Include="assets\images\svg\crypto-icons\qiwi.svg" />
+    <Content Include="assets\images\svg\crypto-icons\qlc.svg" />
+    <Content Include="assets\images\svg\crypto-icons\qrl.svg" />
+    <Content Include="assets\images\svg\crypto-icons\qsp.svg" />
+    <Content Include="assets\images\svg\crypto-icons\qtum.svg" />
+    <Content Include="assets\images\svg\crypto-icons\r.svg" />
+    <Content Include="assets\images\svg\crypto-icons\rads.svg" />
+    <Content Include="assets\images\svg\crypto-icons\rap.svg" />
+    <Content Include="assets\images\svg\crypto-icons\rcn.svg" />
+    <Content Include="assets\images\svg\crypto-icons\rdd.svg" />
+    <Content Include="assets\images\svg\crypto-icons\rdn.svg" />
+    <Content Include="assets\images\svg\crypto-icons\ren.svg" />
+    <Content Include="assets\images\svg\crypto-icons\rep.svg" />
+    <Content Include="assets\images\svg\crypto-icons\repv2.svg" />
+    <Content Include="assets\images\svg\crypto-icons\req.svg" />
+    <Content Include="assets\images\svg\crypto-icons\rhoc.svg" />
+    <Content Include="assets\images\svg\crypto-icons\ric.svg" />
+    <Content Include="assets\images\svg\crypto-icons\rise.svg" />
+    <Content Include="assets\images\svg\crypto-icons\rlc.svg" />
+    <Content Include="assets\images\svg\crypto-icons\rpx.svg" />
+    <Content Include="assets\images\svg\crypto-icons\rub.svg" />
+    <Content Include="assets\images\svg\crypto-icons\rvn.svg" />
+    <Content Include="assets\images\svg\crypto-icons\ryo.svg" />
+    <Content Include="assets\images\svg\crypto-icons\safe.svg" />
+    <Content Include="assets\images\svg\crypto-icons\safemoon.svg" />
+    <Content Include="assets\images\svg\crypto-icons\sai.svg" />
+    <Content Include="assets\images\svg\crypto-icons\salt.svg" />
+    <Content Include="assets\images\svg\crypto-icons\san.svg" />
+    <Content Include="assets\images\svg\crypto-icons\sand.svg" />
+    <Content Include="assets\images\svg\crypto-icons\sbd.svg" />
+    <Content Include="assets\images\svg\crypto-icons\sberbank.svg" />
+    <Content Include="assets\images\svg\crypto-icons\sc.svg" />
+    <Content Include="assets\images\svg\crypto-icons\shift.svg" />
+    <Content Include="assets\images\svg\crypto-icons\sib.svg" />
+    <Content Include="assets\images\svg\crypto-icons\sin.svg" />
+    <Content Include="assets\images\svg\crypto-icons\skl.svg" />
+    <Content Include="assets\images\svg\crypto-icons\sky.svg" />
+    <Content Include="assets\images\svg\crypto-icons\slr.svg" />
+    <Content Include="assets\images\svg\crypto-icons\sls.svg" />
+    <Content Include="assets\images\svg\crypto-icons\smart.svg" />
+    <Content Include="assets\images\svg\crypto-icons\sngls.svg" />
+    <Content Include="assets\images\svg\crypto-icons\snm.svg" />
+    <Content Include="assets\images\svg\crypto-icons\snt.svg" />
+    <Content Include="assets\images\svg\crypto-icons\snx.svg" />
+    <Content Include="assets\images\svg\crypto-icons\soc.svg" />
+    <Content Include="assets\images\svg\crypto-icons\sol.svg" />
+    <Content Include="assets\images\svg\crypto-icons\spacehbit.svg" />
+    <Content Include="assets\images\svg\crypto-icons\spank.svg" />
+    <Content Include="assets\images\svg\crypto-icons\sphtx.svg" />
+    <Content Include="assets\images\svg\crypto-icons\srn.svg" />
+    <Content Include="assets\images\svg\crypto-icons\stak.svg" />
+    <Content Include="assets\images\svg\crypto-icons\start.svg" />
+    <Content Include="assets\images\svg\crypto-icons\steem.svg" />
+    <Content Include="assets\images\svg\crypto-icons\storj.svg" />
+    <Content Include="assets\images\svg\crypto-icons\storm.svg" />
+    <Content Include="assets\images\svg\crypto-icons\stox.svg" />
+    <Content Include="assets\images\svg\crypto-icons\stq.svg" />
+    <Content Include="assets\images\svg\crypto-icons\strat.svg" />
+    <Content Include="assets\images\svg\crypto-icons\stx.svg" />
+    <Content Include="assets\images\svg\crypto-icons\sub.svg" />
+    <Content Include="assets\images\svg\crypto-icons\sumo.svg" />
+    <Content Include="assets\images\svg\crypto-icons\sushi.svg" />
+    <Content Include="assets\images\svg\crypto-icons\sys.svg" />
+    <Content Include="assets\images\svg\crypto-icons\taas.svg" />
+    <Content Include="assets\images\svg\crypto-icons\tau.svg" />
+    <Content Include="assets\images\svg\crypto-icons\tbx.svg" />
+    <Content Include="assets\images\svg\crypto-icons\tel.svg" />
+    <Content Include="assets\images\svg\crypto-icons\ten.svg" />
+    <Content Include="assets\images\svg\crypto-icons\tern.svg" />
+    <Content Include="assets\images\svg\crypto-icons\tgch.svg" />
+    <Content Include="assets\images\svg\crypto-icons\theta.svg" />
+    <Content Include="assets\images\svg\crypto-icons\tix.svg" />
+    <Content Include="assets\images\svg\crypto-icons\tkn.svg" />
+    <Content Include="assets\images\svg\crypto-icons\tks.svg" />
+    <Content Include="assets\images\svg\crypto-icons\tnb.svg" />
+    <Content Include="assets\images\svg\crypto-icons\tnc.svg" />
+    <Content Include="assets\images\svg\crypto-icons\tnt.svg" />
+    <Content Include="assets\images\svg\crypto-icons\tomo.svg" />
+    <Content Include="assets\images\svg\crypto-icons\tpay.svg" />
+    <Content Include="assets\images\svg\crypto-icons\trig.svg" />
+    <Content Include="assets\images\svg\crypto-icons\trtl.svg" />
+    <Content Include="assets\images\svg\crypto-icons\trx.svg" />
+    <Content Include="assets\images\svg\crypto-icons\tusd.svg" />
+    <Content Include="assets\images\svg\crypto-icons\tzc.svg" />
+    <Content Include="assets\images\svg\crypto-icons\ubq.svg" />
+    <Content Include="assets\images\svg\crypto-icons\uma.svg" />
+    <Content Include="assets\images\svg\crypto-icons\uni.svg" />
+    <Content Include="assets\images\svg\crypto-icons\unity.svg" />
+    <Content Include="assets\images\svg\crypto-icons\usd.svg" />
+    <Content Include="assets\images\svg\crypto-icons\usdc.svg" />
+    <Content Include="assets\images\svg\crypto-icons\usdt.svg" />
+    <Content Include="assets\images\svg\crypto-icons\utk.svg" />
+    <Content Include="assets\images\svg\crypto-icons\veri.svg" />
+    <Content Include="assets\images\svg\crypto-icons\vet.svg" />
+    <Content Include="assets\images\svg\crypto-icons\via.svg" />
+    <Content Include="assets\images\svg\crypto-icons\vib.svg" />
+    <Content Include="assets\images\svg\crypto-icons\vibe.svg" />
+    <Content Include="assets\images\svg\crypto-icons\vivo.svg" />
+    <Content Include="assets\images\svg\crypto-icons\vrc.svg" />
+    <Content Include="assets\images\svg\crypto-icons\vrsc.svg" />
+    <Content Include="assets\images\svg\crypto-icons\vtc.svg" />
+    <Content Include="assets\images\svg\crypto-icons\vtho.svg" />
+    <Content Include="assets\images\svg\crypto-icons\wabi.svg" />
+    <Content Include="assets\images\svg\crypto-icons\wan.svg" />
+    <Content Include="assets\images\svg\crypto-icons\waves.svg" />
+    <Content Include="assets\images\svg\crypto-icons\wax.svg" />
+    <Content Include="assets\images\svg\crypto-icons\wbtc.svg" />
+    <Content Include="assets\images\svg\crypto-icons\wgr.svg" />
+    <Content Include="assets\images\svg\crypto-icons\wicc.svg" />
+    <Content Include="assets\images\svg\crypto-icons\wings.svg" />
+    <Content Include="assets\images\svg\crypto-icons\wpr.svg" />
+    <Content Include="assets\images\svg\crypto-icons\wtc.svg" />
+    <Content Include="assets\images\svg\crypto-icons\x.svg" />
+    <Content Include="assets\images\svg\crypto-icons\xas.svg" />
+    <Content Include="assets\images\svg\crypto-icons\xbc.svg" />
+    <Content Include="assets\images\svg\crypto-icons\xbp.svg" />
+    <Content Include="assets\images\svg\crypto-icons\xby.svg" />
+    <Content Include="assets\images\svg\crypto-icons\xcp.svg" />
+    <Content Include="assets\images\svg\crypto-icons\xdn.svg" />
+    <Content Include="assets\images\svg\crypto-icons\xem.svg" />
+    <Content Include="assets\images\svg\crypto-icons\xin.svg" />
+    <Content Include="assets\images\svg\crypto-icons\xlm.svg" />
+    <Content Include="assets\images\svg\crypto-icons\xmcc.svg" />
+    <Content Include="assets\images\svg\crypto-icons\xmg.svg" />
+    <Content Include="assets\images\svg\crypto-icons\xmo.svg" />
+    <Content Include="assets\images\svg\crypto-icons\xmr.svg" />
+    <Content Include="assets\images\svg\crypto-icons\xmy.svg" />
+    <Content Include="assets\images\svg\crypto-icons\xp.svg" />
+    <Content Include="assets\images\svg\crypto-icons\xpa.svg" />
+    <Content Include="assets\images\svg\crypto-icons\xpm.svg" />
+    <Content Include="assets\images\svg\crypto-icons\xpr.svg" />
+    <Content Include="assets\images\svg\crypto-icons\xrp.svg" />
+    <Content Include="assets\images\svg\crypto-icons\xsg.svg" />
+    <Content Include="assets\images\svg\crypto-icons\xtz.svg" />
+    <Content Include="assets\images\svg\crypto-icons\xuc.svg" />
+    <Content Include="assets\images\svg\crypto-icons\xvc.svg" />
+    <Content Include="assets\images\svg\crypto-icons\xvg.svg" />
+    <Content Include="assets\images\svg\crypto-icons\xzc.svg" />
+    <Content Include="assets\images\svg\crypto-icons\yfi.svg" />
+    <Content Include="assets\images\svg\crypto-icons\yoyow.svg" />
+    <Content Include="assets\images\svg\crypto-icons\zcl.svg" />
+    <Content Include="assets\images\svg\crypto-icons\zec.svg" />
+    <Content Include="assets\images\svg\crypto-icons\zel.svg" />
+    <Content Include="assets\images\svg\crypto-icons\zen.svg" />
+    <Content Include="assets\images\svg\crypto-icons\zest.svg" />
+    <Content Include="assets\images\svg\crypto-icons\zil.svg" />
+    <Content Include="assets\images\svg\crypto-icons\zilla.svg" />
+    <Content Include="assets\images\svg\crypto-icons\zrx.svg" />
+    <Content Include="assets\images\sweetalert2\email-verify.png" />
+    <Content Include="assets\images\sweetalert2\error-message.png" />
+    <Content Include="assets\images\sweetalert2\join-community.png" />
+    <Content Include="assets\images\sweetalert2\notification-message.png" />
+    <Content Include="assets\images\sweetalert2\success-message.png" />
+    <Content Include="assets\images\sweetalert2\warning-message.png" />
+    <Content Include="assets\images\task.png" />
+    <Content Include="assets\images\user-illustarator-1.png" />
+    <Content Include="assets\images\user-illustarator-2.png" />
+    <Content Include="assets\images\users\avatar-1.jpg" />
+    <Content Include="assets\images\users\avatar-10.jpg" />
+    <Content Include="assets\images\users\avatar-2.jpg" />
+    <Content Include="assets\images\users\avatar-3.jpg" />
+    <Content Include="assets\images\users\avatar-4.jpg" />
+    <Content Include="assets\images\users\avatar-5.jpg" />
+    <Content Include="assets\images\users\avatar-6.jpg" />
+    <Content Include="assets\images\users\avatar-7.jpg" />
+    <Content Include="assets\images\users\avatar-8.jpg" />
+    <Content Include="assets\images\users\avatar-9.jpg" />
+    <Content Include="assets\images\users\multi-user.jpg" />
+    <Content Include="assets\images\users\user-dummy-img.jpg" />
+    <Content Include="assets\images\verification-img.png" />
+    <Content Include="assets\js\app.js" />
+    <Content Include="assets\js\layout.js" />
+    <Content Include="assets\js\pages\animation-aos.init.js" />
+    <Content Include="assets\js\pages\apexcharts-area.init.js" />
+    <Content Include="assets\js\pages\apexcharts-bar.init.js" />
+    <Content Include="assets\js\pages\apexcharts-boxplot.init.js" />
+    <Content Include="assets\js\pages\apexcharts-bubble.init.js" />
+    <Content Include="assets\js\pages\apexcharts-candlestick.init.js" />
+    <Content Include="assets\js\pages\apexcharts-column.init.js" />
+    <Content Include="assets\js\pages\apexcharts-heatmap.init.js" />
+    <Content Include="assets\js\pages\apexcharts-line.init.js" />
+    <Content Include="assets\js\pages\apexcharts-mixed.init.js" />
+    <Content Include="assets\js\pages\apexcharts-pie.init.js" />
+    <Content Include="assets\js\pages\apexcharts-polararea.init.js" />
+    <Content Include="assets\js\pages\apexcharts-radar.init.js" />
+    <Content Include="assets\js\pages\apexcharts-radialbar.init.js" />
+    <Content Include="assets\js\pages\apexcharts-scatter.init.js" />
+    <Content Include="assets\js\pages\apexcharts-timeline.init.js" />
+    <Content Include="assets\js\pages\apexcharts-treemap.init.js" />
+    <Content Include="assets\js\pages\api-key.init.js" />
+    <Content Include="assets\js\pages\apps-nft-auction.init.js" />
+    <Content Include="assets\js\pages\apps-nft-create.init.js" />
+    <Content Include="assets\js\pages\apps-nft-explore.init.js" />
+    <Content Include="assets\js\pages\apps-nft-item-details.init.js" />
+    <Content Include="assets\js\pages\apps-nft-ranking.init.js" />
+    <Content Include="assets\js\pages\calendar.init.js" />
+    <Content Include="assets\js\pages\card.init.js" />
+    <Content Include="assets\js\pages\chartjs.init.js" />
+    <Content Include="assets\js\pages\chat.init.js" />
+    <Content Include="assets\js\pages\coming-soon.init.js" />
+    <Content Include="assets\js\pages\crm-companies.init.js" />
+    <Content Include="assets\js\pages\crm-contact.init.js" />
+    <Content Include="assets\js\pages\crm-deals.init.js" />
+    <Content Include="assets\js\pages\crm-leads.init.js" />
+    <Content Include="assets\js\pages\crypto-buy-sell.init.js" />
+    <Content Include="assets\js\pages\crypto-kyc.init.js" />
+    <Content Include="assets\js\pages\crypto-orders.init.js" />
+    <Content Include="assets\js\pages\crypto-transactions.init.js" />
+    <Content Include="assets\js\pages\crypto-wallet.init.js" />
+    <Content Include="assets\js\pages\dashboard-analytics.init.js" />
+    <Content Include="assets\js\pages\dashboard-crm.init.js" />
+    <Content Include="assets\js\pages\dashboard-crypto.init.js" />
+    <Content Include="assets\js\pages\dashboard-ecommerce.init.js" />
+    <Content Include="assets\js\pages\dashboard-job.init.js" />
+    <Content Include="assets\js\pages\dashboard-nft.init.js" />
+    <Content Include="assets\js\pages\dashboard-projects.init.js" />
+    <Content Include="assets\js\pages\datatables.init.js" />
+    <Content Include="assets\js\pages\echarts.init.js" />
+    <Content Include="assets\js\pages\ecommerce-cart.init.js" />
+    <Content Include="assets\js\pages\ecommerce-customer-list.init.js" />
+    <Content Include="assets\js\pages\ecommerce-order.init.js" />
+    <Content Include="assets\js\pages\ecommerce-product-checkout.init.js" />
+    <Content Include="assets\js\pages\ecommerce-product-create.init.js" />
+    <Content Include="assets\js\pages\ecommerce-product-details.init.js" />
+    <Content Include="assets\js\pages\ecommerce-product-list.init.js" />
+    <Content Include="assets\js\pages\file-manager.init.js" />
+    <Content Include="assets\js\pages\flag-input.init.js" />
+    <Content Include="assets\js\pages\form-advanced.init.js" />
+    <Content Include="assets\js\pages\form-editor.init.js" />
+    <Content Include="assets\js\pages\form-file-upload.init.js" />
+    <Content Include="assets\js\pages\form-input-spin.init.js" />
+    <Content Include="assets\js\pages\form-masks.init.js" />
+    <Content Include="assets\js\pages\form-pickers.init.js" />
+    <Content Include="assets\js\pages\form-validation.init.js" />
+    <Content Include="assets\js\pages\form-wizard.init.js" />
+    <Content Include="assets\js\pages\gallery.init.js" />
+    <Content Include="assets\js\pages\gmaps.init.js" />
+    <Content Include="assets\js\pages\gridjs.init.js" />
+    <Content Include="assets\js\pages\invoicecreate.init.js" />
+    <Content Include="assets\js\pages\invoicedetails.js" />
+    <Content Include="assets\js\pages\invoiceslist.init.js" />
+    <Content Include="assets\js\pages\job-application.init.js" />
+    <Content Include="assets\js\pages\job-candidate-grid.init.js" />
+    <Content Include="assets\js\pages\job-candidate-lists.init.js" />
+    <Content Include="assets\js\pages\job-companies-lists.init.js" />
+    <Content Include="assets\js\pages\job-grid-list.init.js" />
+    <Content Include="assets\js\pages\job-lading.init.js" />
+    <Content Include="assets\js\pages\job-list.init.js" />
+    <Content Include="assets\js\pages\job-statistics.init.js" />
+    <Content Include="assets\js\pages\landing.init.js" />
+    <Content Include="assets\js\pages\leaflet-map.init.js" />
+    <Content Include="assets\js\pages\leaflet-us-states.js" />
+    <Content Include="assets\js\pages\listjs.init.js" />
+    <Content Include="assets\js\pages\mailbox.init.js" />
+    <Content Include="assets\js\pages\materialdesign.list.js" />
+    <Content Include="assets\js\pages\modal.init.js" />
+    <Content Include="assets\js\pages\nestable.init.js" />
+    <Content Include="assets\js\pages\nft-landing.init.js" />
+    <Content Include="assets\js\pages\notifications.init.js" />
+    <Content Include="assets\js\pages\particles.app.js" />
+    <Content Include="assets\js\pages\passowrd-create.init.js" />
+    <Content Include="assets\js\pages\password-addon.init.js" />
+    <Content Include="assets\js\pages\plugins\lord-icon-2.1.0.js" />
+    <Content Include="assets\js\pages\pricing.init.js" />
+    <Content Include="assets\js\pages\profile-setting.init.js" />
+    <Content Include="assets\js\pages\profile.init.js" />
+    <Content Include="assets\js\pages\project-create.init.js" />
+    <Content Include="assets\js\pages\project-list.init.js" />
+    <Content Include="assets\js\pages\project-overview.init.js" />
+    <Content Include="assets\js\pages\range-sliders.init.js" />
+    <Content Include="assets\js\pages\rating.init.js" />
+    <Content Include="assets\js\pages\remix-icons-listing.js" />
+    <Content Include="assets\js\pages\search-result.init.js" />
+    <Content Include="assets\js\pages\select2.init.js" />
+    <Content Include="assets\js\pages\seller-details.init.js" />
+    <Content Include="assets\js\pages\sellers.init.js" />
+    <Content Include="assets\js\pages\sweetalerts.init.js" />
+    <Content Include="assets\js\pages\swiper.init.js" />
+    <Content Include="assets\js\pages\tasks-kanban.init.js" />
+    <Content Include="assets\js\pages\tasks-list.init.js" />
+    <Content Include="assets\js\pages\team.init.js" />
+    <Content Include="assets\js\pages\ticketdetail.init.js" />
+    <Content Include="assets\js\pages\ticketlist.init.js" />
+    <Content Include="assets\js\pages\timeline.init.js" />
+    <Content Include="assets\js\pages\todo.init.js" />
+    <Content Include="assets\js\pages\tour.init.js" />
+    <Content Include="assets\js\pages\two-step-verification.init.js" />
+    <Content Include="assets\js\pages\vector-maps.init.js" />
+    <Content Include="assets\js\pages\widgets.init.js" />
+    <Content Include="assets\js\plugins.js" />
+    <Content Include="assets\js\sweetalert2.min.js" />
+    <Content Include="assets\libs\%40ckeditor\ckeditor5-build-classic\build\ckeditor.js" />
+    <Content Include="assets\libs\%40simonwep\pickr\pickr.min.js" />
+    <Content Include="assets\libs\%40simonwep\pickr\themes\classic.min.css" />
+    <Content Include="assets\libs\%40simonwep\pickr\themes\monolith.min.css" />
+    <Content Include="assets\libs\%40simonwep\pickr\themes\nano.min.css" />
+    <Content Include="assets\libs\%40tarekraafat\autocomplete.js\autoComplete.min.js" />
+    <Content Include="assets\libs\%40tarekraafat\autocomplete.js\css\autoComplete.css" />
+    <Content Include="assets\libs\%40tarekraafat\autocomplete.js\css\images\search.svg" />
+    <Content Include="assets\libs\aos\aos.css" />
+    <Content Include="assets\libs\aos\aos.js" />
+    <Content Include="assets\libs\apexcharts\apexcharts.min.js" />
+    <Content Include="assets\libs\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="assets\libs\card\card.js" />
+    <Content Include="assets\libs\chart.js\chart.min.js" />
+    <Content Include="assets\libs\cleave.js\cleave.min.js" />
+    <Content Include="assets\libs\dom-autoscroller\dom-autoscroller.min.js" />
+    <Content Include="assets\libs\dragula\dragula.min.css" />
+    <Content Include="assets\libs\dragula\dragula.min.js" />
+    <Content Include="assets\libs\dropzone\dropzone-min.js" />
+    <Content Include="assets\libs\dropzone\dropzone.css" />
+    <Content Include="assets\libs\echarts\echarts.min.js" />
+    <Content Include="assets\libs\feather-icons\feather.min.js" />
+    <Content Include="assets\libs\fg-emoji-picker\fgEmojiPicker.js" />
+    <Content Include="assets\libs\filepond-plugin-file-encode\filepond-plugin-file-encode.min.js" />
+    <Content Include="assets\libs\filepond-plugin-file-validate-size\filepond-plugin-file-validate-size.min.js" />
+    <Content Include="assets\libs\filepond-plugin-image-exif-orientation\filepond-plugin-image-exif-orientation.min.js" />
+    <Content Include="assets\libs\filepond-plugin-image-preview\filepond-plugin-image-preview.min.css" />
+    <Content Include="assets\libs\filepond-plugin-image-preview\filepond-plugin-image-preview.min.js" />
+    <Content Include="assets\libs\filepond\filepond.min.css" />
+    <Content Include="assets\libs\filepond\filepond.min.js" />
+    <Content Include="assets\libs\fullcalendar\main.min.css" />
+    <Content Include="assets\libs\fullcalendar\main.min.js" />
+    <Content Include="assets\libs\glightbox\css\glightbox.min.css" />
+    <Content Include="assets\libs\glightbox\js\glightbox.min.js" />
+    <Content Include="assets\libs\gmaps\gmaps.min.js" />
+    <Content Include="assets\libs\gridjs\gridjs.umd.js" />
+    <Content Include="assets\libs\gridjs\theme\mermaid.min.css" />
+    <Content Include="assets\libs\isotope-layout\isotope.pkgd.min.js" />
+    <Content Include="assets\libs\jsvectormap\css\jsvectormap.min.css" />
+    <Content Include="assets\libs\jsvectormap\js\jsvectormap.min.js" />
+    <Content Include="assets\libs\jsvectormap\maps\canada.js" />
+    <Content Include="assets\libs\jsvectormap\maps\russia.js" />
+    <Content Include="assets\libs\jsvectormap\maps\spain.js" />
+    <Content Include="assets\libs\jsvectormap\maps\us-merc-en.js" />
+    <Content Include="assets\libs\jsvectormap\maps\world-merc.js" />
+    <Content Include="assets\libs\leaflet\images\layers-2x.png" />
+    <Content Include="assets\libs\leaflet\images\layers.png" />
+    <Content Include="assets\libs\leaflet\images\marker-icon.png" />
+    <Content Include="assets\libs\leaflet\leaflet.css" />
+    <Content Include="assets\libs\leaflet\leaflet.js" />
+    <Content Include="assets\libs\list.js\list.min.js" />
+    <Content Include="assets\libs\list.pagination.js\list.pagination.min.js" />
+    <Content Include="assets\libs\masonry-layout\masonry.pkgd.min.js" />
+    <Content Include="assets\libs\moment\min\moment.min.js" />
+    <Content Include="assets\libs\moment\moment.js" />
+    <Content Include="assets\libs\multi.js\multi.min.css" />
+    <Content Include="assets\libs\multi.js\multi.min.js" />
+    <Content Include="assets\libs\node-waves\waves.min.js" />
+    <Content Include="assets\libs\nouislider\nouislider.min.css" />
+    <Content Include="assets\libs\nouislider\nouislider.min.js" />
+    <Content Include="assets\libs\particles.js\particles.js" />
+    <Content Include="assets\libs\prismjs\prism.js" />
+    <Content Include="assets\libs\quill\quill.bubble.css" />
+    <Content Include="assets\libs\quill\quill.core.css" />
+    <Content Include="assets\libs\quill\quill.min.js" />
+    <Content Include="assets\libs\quill\quill.snow.css" />
+    <Content Include="assets\libs\rater-js\index.js" />
+    <Content Include="assets\libs\shepherd.js\css\shepherd.css" />
+    <Content Include="assets\libs\shepherd.js\js\shepherd.min.js" />
+    <Content Include="assets\libs\simplebar\simplebar.min.js" />
+    <Content Include="assets\libs\sortablejs\Sortable.min.js" />
+    <Content Include="assets\libs\sweetalert2\sweetalert2.min.css" />
+    <Content Include="assets\libs\sweetalert2\sweetalert2.min.js" />
+    <Content Include="assets\libs\swiper\swiper-bundle.min.css" />
+    <Content Include="assets\libs\swiper\swiper-bundle.min.js" />
+    <Content Include="assets\libs\wnumb\wNumb.min.js" />
+    <Content Include="Global.asax" />
+    <Content Include="Jquery\jquery-3.6.1.min.js" />
+    <Content Include="Jquery\Main.js" />
+    <Content Include="Jquery\MyJavaScriptFile.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ApiController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PanelController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TApiUser.cs" />
+    <Compile Include="Models\TRestClient.cs" />
+    <Compile Include="Models\TSiteSettings.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="assets\fonts\boxicons.eot" />
+    <Content Include="assets\fonts\boxicons.ttf" />
+    <Content Include="assets\fonts\boxicons.woff" />
+    <Content Include="assets\fonts\la-brands-400.eot" />
+    <Content Include="assets\fonts\la-brands-400.ttf" />
+    <Content Include="assets\fonts\la-brands-400.woff" />
+    <Content Include="assets\fonts\la-brands-400d41d.eot" />
+    <Content Include="assets\fonts\la-regular-400.eot" />
+    <Content Include="assets\fonts\la-regular-400.ttf" />
+    <Content Include="assets\fonts\la-regular-400.woff" />
+    <Content Include="assets\fonts\la-regular-400d41d.eot" />
+    <Content Include="assets\fonts\la-solid-900.eot" />
+    <Content Include="assets\fonts\la-solid-900.ttf" />
+    <Content Include="assets\fonts\la-solid-900.woff" />
+    <Content Include="assets\fonts\la-solid-900d41d.eot" />
+    <Content Include="assets\fonts\materialdesignicons-webfont1d2d.eot" />
+    <Content Include="assets\fonts\materialdesignicons-webfont1d2d.ttf" />
+    <Content Include="assets\fonts\materialdesignicons-webfont1d2d.woff" />
+    <Content Include="assets\fonts\materialdesignicons-webfontd41d.eot" />
+    <Content Include="assets\fonts\remixicondf6d.eot" />
+    <Content Include="assets\fonts\remixicondf6d.ttf" />
+    <Content Include="assets\fonts\remixicondf6d.woff" />
+    <None Include="packages.config" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Panel\IndexPanel.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Views\Api\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PYS.Application.Data\PYS.Application.Data.csproj">
+      <Project>{316A3D2C-4EBB-4186-8356-6FD230ADEE8C}</Project>
+      <Name>PYS.Application.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PYS.Application.Helper\PYS.Application.Helper.csproj">
+      <Project>{793BB4FC-EA2F-4025-A98A-99243DB0C83C}</Project>
+      <Name>PYS.Application.Helper</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51948</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44347/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,8 @@
+D:\TuncGulec\Grup1\ProjeYonetimSistemi\PYS.Application.RestFull\PYS.Application.Security.TestForm\PYS.Application.Security.TestForm\obj\Debug\PYS.Security.TestForm.csproj.AssemblyReference.cache
+D:\TuncGulec\Grup1\ProjeYonetimSistemi\PYS.Application.RestFull\PYS.Application.Security.TestForm\PYS.Application.Security.TestForm\obj\Debug\PYS.Security.TestForm.csproj.SuggestedBindingRedirects.cache
+D:\TuncGulec\Grup1\ProjeYonetimSistemi\PYS.Application.RestFull\PYS.Application.Security.TestForm\PYS.Application.Security.TestForm\obj\Debug\PYS.Security.TestForm.Form1.resources
+D:\TuncGulec\Grup1\ProjeYonetimSistemi\PYS.Application.RestFull\PYS.Application.Security.TestForm\PYS.Application.Security.TestForm\obj\Debug\PYS.Application.Security.TestForm.Properties.Resources.resources
+D:\TuncGulec\Grup1\ProjeYonetimSistemi\PYS.Application.RestFull\PYS.Application.Security.TestForm\PYS.Application.Security.TestForm\obj\Debug\PYS.Security.TestForm.csproj.GenerateResource.cache
+D:\TuncGulec\Grup1\ProjeYonetimSistemi\PYS.Application.RestFull\PYS.Application.Security.TestForm\PYS.Application.Security.TestForm\obj\Debug\PYS.Security.TestForm.csproj.CoreCompileInputs.cache
+D:\TuncGulec\Grup1\ProjeYonetimSistemi\PYS.Application.RestFull\PYS.Application.Security.TestForm\PYS.Application.Security.TestForm\obj\Debug\PYS.Application.Security.TestForm.exe
+D:\TuncGulec\Grup1\ProjeYonetimSistemi\PYS.Application.RestFull\PYS.Application.Security.TestForm\PYS.Application.Security.TestForm\obj\Debug\PYS.Application.Security.TestForm.pdb
